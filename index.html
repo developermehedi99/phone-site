@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone hunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center text-4xl mt-5 font-bold">phone hunting api</h1>
+    </header>
+
+    <main class="mt-12 container mx-auto ">
+        <!-- search result -->
+        <section class="my-4">
+            <input id="search-fild" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearchBtn()" class="btn btn-secondary mx-4">Search</button>
+        </section>
+        <section>
+            <div id="loading-spinner" class="text-center my-40 hidden"><span class="loading loading-spinner loading-lg"></span></div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <div id="showAll" class=" hidden mt-12 text-center my-8"><button class="btn btn-primary">show all</button></div>
+        </section>
+
+        <!-- model part -->
+        <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="">open modal</button> -->
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="phone-name" class="font-bold text-lg"> </h3>
+    <div id="show-details-container">
+      
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-accent">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    </main>
+
+    <script src="./js/js.js"></script>
+</body>
+
+</html>
