@@ -1,4 +1,4 @@
-const loadData = async (searchText22) => {
+const loadData = async (searchText22='12') => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText22}`);
     const data = await res.json();
     const phone = data.data;
@@ -86,4 +86,4 @@ const toggleLoadingSpinner = (isLoading) =>{
     }
 }
 
-// loadData();
+loadData();
